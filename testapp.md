@@ -13,3 +13,9 @@ Get minikube IP
 
 Then, access your app at:
 - http://minikubeip:30007/
+
+Improvements for production deployment:
+- Using HorizontalPodAutoscaler for app deployment to ensure app availability.
+- To monitor go app with prometheus, we should add following module
+  import "github.com/prometheus/client_golang/prometheus"
+- Define PodDisruptionBudget to ensure that few pods are available. 
