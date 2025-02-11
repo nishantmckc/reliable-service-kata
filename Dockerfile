@@ -14,6 +14,9 @@ RUN go build -o main ./pkg/service/main.go
 # Use a lightweight base image for the final stage
 FROM alpine:latest
 
+RUN addgroup --system appgroup && adduser --system appuser --ingroup appgroup
+USER appuser
+
 # Set the working directory
 WORKDIR /app/
 
