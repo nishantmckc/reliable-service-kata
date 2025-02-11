@@ -12,4 +12,4 @@ Get minikube IP
 - minikube ip
 
 Then, access your app at:
-- http://<minikube-ip>:30007/
+- http://minikubeip:30007/
